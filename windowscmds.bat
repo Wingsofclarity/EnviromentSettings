@@ -1,8 +1,8 @@
 @echo off
-./cmdtobash
+call ./cmdtobash
 ::cd /d D:/
-./java
-./tabula_project
+call ./java
+call ./tabula_project
 
 ::Application Mapping
 doskey gvim = START d:/gvim
