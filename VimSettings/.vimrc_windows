@@ -3,6 +3,7 @@ execute "source ".vim_home."/.quantum"
 :command! Vimrc edit D:/EnviromentSettings/VimSettings/.vimrc
 :command! Ebash edit D:/EnviromentSettings/.bashrc | echo "Warning: Bash not available in windows mode."
 :command! Ecmd edit D:/EnviromentSettings/windowscmds.bat
+:command! Ees Explore D:/EnviromentSettings
 
 "Display errors
 :command! Bash echo "Error: Bash not available in windows mode."
