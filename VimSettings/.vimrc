@@ -6,6 +6,7 @@ if !exists("*ReloadVimrc()")
 	endfunction
 endif
 nnoremap <F9> :call ReloadVimrc()<CR>
+:command! Reload call ReloadVimrc()
 
 
 "Basic formation
@@ -22,6 +23,11 @@ execute "set softtabstop=".tabsize
    syntax enable
 "endif
 
+if !exists('vim_home')
+	echo "No vim_home set"
+endif
+:command! W w
+":command! Tovim cd vim_home
 
 " ----Force Mode----
 inoremap <Right> <nop>
@@ -37,9 +43,6 @@ set clipboard=unnamed
 :echo "Vimrc loaded."
 
 "System specific commands
-if !exists('vim_home')
-	echo "No vim_home set"
-endif
 
 if has('win32')
 	execute "source ".vim_home."/.vimrc_windows"
