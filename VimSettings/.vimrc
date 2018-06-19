@@ -27,10 +27,8 @@ if !exists('vim_home')
 	echo "No vim_home set"
 endif
 :command! W w
-":command! Tovim cd vim_home
-:command! Bash ConqueTerm bash
-":command! Vimrc open /Users/Wings/EnviromentSettings/VimSettings/.vimrc
-":command! Ebash open /Users/Wings/EnviromentSettings/.bashrc
+:command! Q q
+:command! Link edit $MYVIMRC
 :command! Time :echo strftime('%c')
 
 " ----Force Mode----
@@ -56,4 +54,9 @@ else
 	"Neither system identified"
 	echo "Trouble in indentifying system OS"
 	execute "source ".vim_home."/.vimrc_mac"
+endif
+
+"Thesis project specifics
+if has('win32')
+	execute "source ".vim_home."/.vimrc_thesis"
 endif
