@@ -1,0 +1,5 @@
+:colorscheme quantum
+:set guifont=Menlo:h15
+
+"End Message
+:echo "vimrc_mac loaded."

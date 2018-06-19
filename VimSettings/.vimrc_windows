@@ -1,0 +1,5 @@
+:set guifont=Consolas:h14
+source D:/VimSettings/.quantum
+
+"End Message
+:echo "vimrc_windows loaded."
