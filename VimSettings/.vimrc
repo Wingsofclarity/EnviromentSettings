@@ -28,6 +28,10 @@ if !exists('vim_home')
 endif
 :command! W w
 ":command! Tovim cd vim_home
+:command! Bash ConqueTerm bash
+":command! Vimrc open /Users/Wings/EnviromentSettings/VimSettings/.vimrc
+":command! Ebash open /Users/Wings/EnviromentSettings/.bashrc
+:command! Time :echo strftime('%c')
 
 " ----Force Mode----
 inoremap <Right> <nop>
