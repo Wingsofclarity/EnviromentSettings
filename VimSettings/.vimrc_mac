@@ -2,7 +2,7 @@
 :set guifont=Menlo:h15
 :command! Ebash edit ~/EnviromentSettings/.bashrc
 :command! Bash ConqueTerm bash
-:command! Vimrc edit ~/EnviromentSettings/VimSettings/.vimrc
+":command! Evimrc edit ~/EnviromentSettings/VimSettings/.vimrc
 :command! Ecmd edit ~/EnviromentSettings/windowscmds.bat | "Warning: windows cmd not available in OSX mode."
 :command! Ees Explore ~/EnviromentSettings
 

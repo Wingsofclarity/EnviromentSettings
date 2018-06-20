@@ -6,7 +6,7 @@ if !exists("*ReloadVimrc()")
 	endfunction
 endif
 nnoremap <F9> :call ReloadVimrc()<CR>
-:command! Reload call ReloadVimrc()
+:command! Vimrc call ReloadVimrc()
 
 
 "Basic formation
@@ -23,8 +23,8 @@ execute "set softtabstop=".tabsize
    syntax enable
 "endif
 
-if !exists('vim_home')
-	echo "No vim_home set"
+if !exists('vim_settings')
+	echo "No vim_settings set"
 endif
 :command! W w
 :command! Q q
@@ -47,16 +47,18 @@ set clipboard=unnamed
 "System specific commands
 
 if has('win32')
-	execute "source ".vim_home."/.vimrc_windows"
+	execute "source ".vim_settings."/.vimrc_windows"
 elseif has('macunix')
-	execute "source ".vim_home."/.vimrc_mac"
+	execute "source ".vim_settings."/.vimrc_mac"
 else
-	"Neither system identified"
+	"Neither system identified
 	echo "Trouble in indentifying system OS"
-	execute "source ".vim_home."/.vimrc_mac"
+	execute "source ".vim_settings."/.vimrc_mac"
 endif
 
 "Thesis project specifics
 if has('win32')
-	execute "source ".vim_home."/.vimrc_thesis"
+	execute "source ".vim_settings."/.vimrc_thesis"
 endif
+
+:command! Evimrc execute "edit ".vim_settings."/.vimrc"
