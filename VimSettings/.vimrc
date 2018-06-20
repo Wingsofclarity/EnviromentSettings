@@ -28,6 +28,8 @@ if !exists('vim_settings')
 endif
 :command! W w
 :command! Q q
+:command! E e
+:command! Ex Explore
 :command! Link edit $MYVIMRC
 :command! Time :echo strftime('%c')
 
@@ -47,18 +49,24 @@ set clipboard=unnamed
 "System specific commands
 
 if has('win32')
-	execute "source ".vim_settings."/.vimrc_windows"
+	execute "source ".vim_settings."/.quantum"
+	:set guifont=Consolas:h14
+	:echo "Windows mode."
 elseif has('macunix')
-	execute "source ".vim_settings."/.vimrc_mac"
+	:echo "OSX mode."
 else
 	"Neither system identified
-	echo "Trouble in indentifying system OS"
-	execute "source ".vim_settings."/.vimrc_mac"
+	:echo "Trouble in indentifying system OS"
+	:echo "OSX mode."
 endif
 
 "Thesis project specifics
 if has('win32')
-	execute "source ".vim_settings."/.vimrc_thesis"
+	execute "source ".vim_settings."/thesis.vim"
 endif
 
 :command! Evimrc execute "edit ".vim_settings."/.vimrc"
+:command! Ebash execute "edit ".enviroment_settings."/.bashrc"
+:command! Ecmd execute "edit ".enviroment_settings."/windowscmds.bat"
+:command! Exes execute "Explore ".enviroment_settings
+:command! Bash ConqueTerm bash
