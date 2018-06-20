@@ -1,0 +1,1 @@
+source ~/EnviromentSettings/.bashrc
