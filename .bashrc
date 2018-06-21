@@ -24,8 +24,7 @@ alias tocode='cd ~/Desktop/Code'
 alias tolab='cd ~/Desktop/matlab'
 alias tohush='cd /Users/shared/unity/hush/hush'
 alias home='cd ~'
-alias tovim='/Users/Wings/.vim'
-alias topop='cd /Users/Wings/Desktop/Code/ospp-2016-group-09'
+alias tovim='cd /Users/Wings/EnviromentSettings/VimSettings/'
 
 #Git
 alias gadd='git add .'
@@ -51,3 +50,10 @@ export PATH=$PATH/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Emacs.app/Contents/
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_9:/Applications/Emacs.app/Contents/MacOS/libexec-x86_64-10_9:/Users/Wings/Downloads/CUnit-2.1-3:/Users/Wings/Downloads/CUnit-2.1-3:/usr/local/bin:/Users/Wings/Downloads/CUnit-2.1-3:/usr/local/go/bin
 alias ssh_uu='ssh guro5637@hamberg.it.uu.se'
 export EDITOR=vi
+
+<<COMMENT
+function cp_links(){
+	cp $EnviromentSettings/links/mac_link.vim ~/.vimrc
+	cp $EnviromentSettings/links/mac_link.bashrc ~/.bashrc
+}
+COMMENT

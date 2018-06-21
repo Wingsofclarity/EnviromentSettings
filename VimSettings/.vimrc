@@ -54,7 +54,6 @@ if has('win32')
 	:echo "Windows mode."
 elseif has('macunix')
 	execute "source ".vim_settings."/.quantum"
-	:set guifont=Consolas:h14
 	:echo "OSX mode."
 else
 	"Neither system identified
