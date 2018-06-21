@@ -53,6 +53,8 @@ if has('win32')
 	:set guifont=Consolas:h14
 	:echo "Windows mode."
 elseif has('macunix')
+	execute "source ".vim_settings."/.quantum"
+	:set guifont=Consolas:h14
 	:echo "OSX mode."
 else
 	"Neither system identified
@@ -67,6 +69,7 @@ endif
 
 :command! Evimrc execute "edit ".vim_settings."/.vimrc"
 :command! Ebash execute "edit ".enviroment_settings."/.bashrc"
+:command! Ebashrc execute "edit ".enviroment_settings."/.bashrc"
 :command! Ecmd execute "edit ".enviroment_settings."/windowscmds.bat"
 :command! Exes execute "Explore ".enviroment_settings
 :command! Bash ConqueTerm bash
