@@ -1,2 +1,2 @@
 export EniromentSettings=~/EnviromentSettings
-source ~/EnviromentSettings/.bashrc
+source ~/EnviromentSettings/Bash/.bashrc

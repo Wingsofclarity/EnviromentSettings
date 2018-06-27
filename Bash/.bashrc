@@ -10,7 +10,7 @@ function add_command () {
     echo "$@" >> ~/.bashrc;
     cp_bash;
 }
-alias reload='source ~/EnviromentSettings/.bashrc'
+alias reload='source ~/EnviromentSettings/Bash/.bashrc'
 
 #Application mapping
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
@@ -26,14 +26,7 @@ alias tohush='cd /Users/shared/unity/hush/hush'
 alias home='cd ~'
 alias tovim='cd /Users/Wings/EnviromentSettings/VimSettings/'
 
-#Git
-alias gadd='git add .'
-alias au_merge='git commit -a -m merge'
-function push_all() {
-    git add .;
-    git commit -a -m "$1";
-    git push origin "$2";
-}
+source ~/EnviromentSettings/Bash/git.bash
 
 #Misc
 function mkcd (){
