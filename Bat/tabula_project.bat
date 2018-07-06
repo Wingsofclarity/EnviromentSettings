@@ -9,3 +9,5 @@ doskey test_tox= %RUN_TAB%\ntp\slim_tox084_508.pdf --guess
 doskey test_lattice=%RUN_TAB%\simple_table.pdf --lattice --guess
 doskey test_stream=%RUN_TAB%\stream_simple_table.pdf --stream --guess
 doskey test_test= %RUN_TAB%\simple_table.pdf -j --guess
+
+cd D:/examensarbete/tabula-java 
