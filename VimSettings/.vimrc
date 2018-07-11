@@ -67,8 +67,8 @@ if has('win32')
 endif
 
 :command! Evimrc execute "edit ".vim_settings."/.vimrc"
-:command! Ebash execute "edit ".enviroment_settings."/.bashrc"
-:command! Ebashrc execute "edit ".enviroment_settings."/.bashrc"
-:command! Ecmd execute "edit ".enviroment_settings."/windowscmds.bat"
+:command! Ebash execute "edit ".enviroment_settings."/Bash/.bashrc"
+:command! Ebashrc execute "edit ".enviroment_settings."/Bash.bashrc"
+:command! Ecmd execute "edit ".enviroment_settings."/Bat/windowscmds.bat"
 :command! Exes execute "Explore ".enviroment_settings
 :command! Bash ConqueTerm bash
