@@ -10,6 +10,8 @@ nnoremap <F9> :call ReloadVimrc()<CR>
 
 
 "Basic formation
+:set wrap
+:set linebreak
 :set ignorecase
 :set smartcase
 :set number
