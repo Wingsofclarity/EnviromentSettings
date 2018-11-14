@@ -5,11 +5,13 @@ if !exists("*ReloadVimrc()")
 		:source $MYVIMRC
 	endfunction
 endif
-nnoremap <F10> :call ReloadVimrc()<CR>
+nnoremap <F9> :call ReloadVimrc()<CR>
 :command! Vimrc call ReloadVimrc()
 
 
 "Basic formation
+:set wrap
+:set linebreak
 :set ignorecase
 :set smartcase
 :set number
@@ -32,7 +34,14 @@ endif
 :command! Ex Explore
 :command! Link edit $MYVIMRC
 :command! Time :echo strftime('%c')
-:command! Here :cd %:p:h
+
+" ----Force Mode----
+inoremap <Right> <nop>
+inoremap <Left> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <c-p> <nop>
+inoremap <c-n> <nop>
 
 set clipboard=unnamed
 
@@ -50,7 +59,6 @@ elseif has('macunix')
 	:echo "OSX mode."
 else
 	"Neither system identified
-	execute "source ".vim_settings."/.quantum"
 	:echo "Trouble in indentifying system OS"
 	:echo "OSX mode."
 endif
@@ -66,4 +74,3 @@ endif
 :command! Ecmd execute "edit ".enviroment_settings."/Bat/windowscmds.bat"
 :command! Exes execute "Explore ".enviroment_settings
 :command! Bash ConqueTerm bash
-:command! Power ConqueTerm C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
