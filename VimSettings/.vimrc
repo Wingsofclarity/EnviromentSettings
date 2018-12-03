@@ -47,6 +47,10 @@ execute "source ".vim_settings."/basic_formation.vim"
 :command! Ecmd execute "edit ".enviroment_settings."/cmd/windowscmds.bat"
 :command! ExEs execute "Explore ".enviroment_settings
 :command! Bash ConqueTerm bash
-au BufRead,BufNewFile *.csv set filetype=csv
+"au BufRead,BufNewFile *.csv set filetype=csv
+
+executable(D:\Programs\Git\git-cmd.exe)
+call plug#begin(vim_settings."/.vim/plugin")
+call plug#end()
 
 :call Speak(verbose, "Vimrc loaded.")
