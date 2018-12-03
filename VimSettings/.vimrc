@@ -33,6 +33,9 @@ endif
 
 :colorscheme quantum
 execute "source ".vim_settings."/basic_formation.vim"
+:set guioptions-=T
+:set guioptions-=m
+:set guioptions-=r
 
 set clipboard=unnamed
 :command! W w
