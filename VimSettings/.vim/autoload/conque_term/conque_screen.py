@@ -1,11 +1,11 @@
 # FILE:     autoload/conque_term/conque_screen.py
 # AUTHOR:   Nico Raffo <nicoraffo@gmail.com>
 # WEBSITE:  http://conque.googlecode.com
-# MODIFIED: 2011-09-02
-# VERSION:  2.3, for Vim 7.0
+# MODIFIED: 2011-08-12
+# VERSION:  2.2, for Vim 7.0
 # LICENSE:
 # Conque - Vim terminal/console emulator
-# Copyright (C) 2009-2011 Nico Raffo
+# Copyright (C) 2009-__YEAR__ Nico Raffo
 #
 # MIT License
 #
@@ -139,10 +139,7 @@ class ConqueScreen(object):
         """ Define value insertion for ConqueScreen objects. """
 
         l = self.screen_top + line - 2
-        try:
-            self.buffer.append(value, l)
-        except:
-            self.buffer[l:l] = [value]
+        self.buffer.append(value, l)
 
 
     def get_top(self):

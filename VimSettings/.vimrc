@@ -31,7 +31,7 @@ else
 	:echo "OSX mode."
 endif
 
-:colorscheme quantum
+:colorscheme slate
 execute "source ".vim_settings."/basic_formation.vim"
 
 :set clipboard=unnamed
@@ -49,7 +49,15 @@ execute "source ".vim_settings."/basic_formation.vim"
 :command! Bash ConqueTerm bash
 "au BufRead,BufNewFile *.csv set filetype=csv
 
-executable(D:\Programs\Git\git-cmd.exe)
+
+function! LineAlign()
+	:%s/\n//g
+	:%s/<\/row>/<\/row>\r/g
+	:%s/<root>/\r<root>\r/g
+endfunction
+:command! LineAlign call LineAlign()
+
+"executable(D:\Programs\Git\git-cmd.exe)
 call plug#begin(vim_settings."/.vim/plugin")
 call plug#end()
 

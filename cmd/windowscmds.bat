@@ -2,7 +2,7 @@
 call ./cmdtobash
 ::cd /d D:/
 call ./java
-call ./tabula_project
+cd D:\Avveckling\Aligner
 
 ::Application Mapping
 doskey gvim = START d:/gvim
