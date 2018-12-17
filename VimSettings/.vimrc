@@ -47,15 +47,9 @@ execute "source ".vim_settings."/basic_formation.vim"
 :command! Ecmd execute "edit ".enviroment_settings."/cmd/windowscmds.bat"
 :command! ExEs execute "Explore ".enviroment_settings
 :command! Bash ConqueTerm bash
+:command! Here execute "cd %:p:h"
 "au BufRead,BufNewFile *.csv set filetype=csv
 
-
-function! LineAlign()
-	:%s/\n//g
-	:%s/<\/row>/<\/row>\r/g
-	:%s/<root>/\r<root>\r/g
-endfunction
-:command! LineAlign call LineAlign()
 
 "executable(D:\Programs\Git\git-cmd.exe)
 call plug#begin(vim_settings."/.vim/plugin")
