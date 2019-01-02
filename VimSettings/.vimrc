@@ -1,9 +1,9 @@
-
-"Setting Debugging
-let s:verbose=1
-if (s:verbose)
-	echo "Link found"
+if !exists(g:link)
+	echo "Link was never found"
 endif
+
+"Setting Debugging Messages
+let s:verbose=0
 function! Speak(string)
 	if (s:verbose)
 		echo a:string
@@ -12,49 +12,36 @@ endfunction
 
 if !exists("*ReloadVimrc()")
 	function! ReloadVimrc()
-		:source $MYVIMRC
+		source $MYVIMRC
 	endfunction
 endif
-:nnoremap <F9> :call ReloadVimrc()<CR>
-:command! Vimrc call ReloadVimrc()
+nnoremap <F9> :call ReloadVimrc()<CR>
+command! Vimrc call ReloadVimrc()
 
 
 if !exists('vim_settings')
 	echo "No vim_settings set"
 endif
 
-:let &runtimepath = vim_settings."/.vim,".&runtimepath
+let &runtimepath = vim_settings."/.vim,".&runtimepath
 
 
 "System specifics
 if has('win32')
 	execute "source ".vim_settings."/gui.vim"
-	:call Speak("Windows mode.")
+	call Speak("Windows mode.")
 elseif has('macunix')
-	:call Speak("OSX mode.")
+	call Speak("OSX mode.")
 else
 	"Neither system identified
-	:echo "Trouble in indentifying system OS"
-	:echo "OSX mode."
+	echo "Trouble in indentifying system OS"
+	echo "OSX mode."
 endif
 
-:colorscheme slate
 execute "source ".vim_settings."/basic_formation.vim"
 
-:set clipboard=unnamed
-:command! W w
-:command! Q q
-:command! E e
-:command! Ex Explore
-:command! Elink edit $MYVIMRC
-:command! Time :echo strftime('%c')
-:command! Evimrc execute "edit ".vim_settings."/.vimrc"
-:command! Ebash execute "edit ".enviroment_settings."/Bash/.bashrc"
-:command! Ebashrc execute "edit ".enviroment_settings."/Bash.bashrc"
-:command! Ecmd execute "edit ".enviroment_settings."/cmd/windowscmds.bat"
-:command! ExEs execute "Explore ".enviroment_settings
-:command! Bash ConqueTerm bash
-:command! Here execute "cd %:p:h"
+set clipboard=unnamed
+execute "source ".vim_settings."/commands.vim"
 "au BufRead,BufNewFile *.csv set filetype=csv
 
 
@@ -62,4 +49,5 @@ execute "source ".vim_settings."/basic_formation.vim"
 call plug#begin(vim_settings."/.vim/plugin")
 call plug#end()
 
-:call Speak( "Vimrc loaded.")
+colorscheme slate
+call Speak("Vimrc loaded.")
