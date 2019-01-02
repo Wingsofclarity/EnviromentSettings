@@ -1,3 +1,15 @@
+
+"Setting Debugging
+let s:verbose=1
+if (s:verbose)
+	echo "Link found"
+endif
+function! Speak(string)
+	if (s:verbose)
+		echo a:string
+	endif
+endfunction
+
 if !exists("*ReloadVimrc()")
 	function! ReloadVimrc()
 		:source $MYVIMRC
@@ -6,11 +18,6 @@ endif
 :nnoremap <F9> :call ReloadVimrc()<CR>
 :command! Vimrc call ReloadVimrc()
 
-function! Speak(verbose, string)
-	if (a:verbose)
-		echo a:string
-	endif
-endfunction
 
 if !exists('vim_settings')
 	echo "No vim_settings set"
@@ -22,9 +29,9 @@ endif
 "System specifics
 if has('win32')
 	execute "source ".vim_settings."/gui.vim"
-	:call Speak(verbose,"Windows mode.")
+	:call Speak("Windows mode.")
 elseif has('macunix')
-	:call Speak(verbose,"OSX mode.")
+	:call Speak("OSX mode.")
 else
 	"Neither system identified
 	:echo "Trouble in indentifying system OS"
@@ -55,4 +62,4 @@ execute "source ".vim_settings."/basic_formation.vim"
 call plug#begin(vim_settings."/.vim/plugin")
 call plug#end()
 
-:call Speak(verbose, "Vimrc loaded.")
+:call Speak( "Vimrc loaded.")

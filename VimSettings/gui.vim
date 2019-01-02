@@ -4,4 +4,4 @@
 :set guioptions-=L
 :set guifont=Consolas:h14
 
-:call Speak(verbose,"gui.vim loaded")
+:call Speak("gui.vim loaded")
