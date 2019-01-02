@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='D:/EnviromentSettings/VimSettings/.vim'
-let g:netrw_dirhist_2='D:\Avveckling'
-let g:netrw_dirhist_3='D:/Avveckling/Metallregistret'
-let g:netrw_dirhist_4='D:/Avveckling/Metallregistret/sql'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='D:\Avveckling\LabMaster_Data\delimiter_987'
+let g:netrw_dirhist_2='D:/Avveckling/LabMaster_Data'
+let g:netrw_dirhist_3='D:/Avveckling/LabMaster_Data/sql'
+let g:netrw_dirhist_4='D:\Avveckling\Subare'
+let g:netrw_dirhist_5='D:/Avveckling/Subare/Test'
+let g:netrw_dirhist_6='D:\Avveckling'
+let g:netrw_dirhist_7='D:/Avveckling/Subare'
