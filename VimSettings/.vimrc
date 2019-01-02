@@ -27,27 +27,19 @@ let &runtimepath = vim_settings."/.vim,".&runtimepath
 
 
 "System specifics
-if has('win32')
+"if has('win32')
+if has("gui_running")
 	execute "source ".vim_settings."/gui.vim"
-	call Speak("Windows mode.")
-elseif has('macunix')
-	call Speak("OSX mode.")
-else
-	"Neither system identified
-	echo "Trouble in indentifying system OS"
-	echo "OSX mode."
 endif
-
 execute "source ".vim_settings."/basic_formation.vim"
-
-set clipboard=unnamed
 execute "source ".vim_settings."/commands.vim"
+set clipboard=unnamed
+colorscheme slate
 "au BufRead,BufNewFile *.csv set filetype=csv
 
 
 "executable(D:\Programs\Git\git-cmd.exe)
-call plug#begin(vim_settings."/.vim/plugin")
+call plug#begin('D:\EnviromentSettings\VimSettings\.vim\plugger')
 call plug#end()
 
-colorscheme slate
 call Speak("Vimrc loaded.")
