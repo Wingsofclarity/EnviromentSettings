@@ -1,4 +1,4 @@
-if !exists(g:link)
+if !exists("g:link")
 	echo "Link was never found"
 endif
 
