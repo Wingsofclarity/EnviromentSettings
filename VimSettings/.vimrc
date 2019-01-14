@@ -34,8 +34,7 @@ endif
 execute "source ".vim_settings."/basic_formation.vim"
 execute "source ".vim_settings."/commands.vim"
 set clipboard=unnamed
-colorscheme slate
-"au BufRead,BufNewFile *.csv set filetype=csv
+colorscheme NewSlate 
 
 
 "executable(D:\Programs\Git\git-cmd.exe)
