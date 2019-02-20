@@ -1,6 +1,5 @@
 "%% SiSU Vim color file
-" Slate Maintainer: Ralph Amissah <ralph@amissah.com>
-" (originally looked at desert Hans Fugal <hans@fugal.net> http://hans.fugal.net/vim/colors/desert.vim (2003/05/06)
+" NewSlate Maintainer: me
 :set background=dark
 :highlight clear
 if version > 580
@@ -30,11 +29,13 @@ let colors_name = "newslate"
 :hi WarningMsg guifg=salmon ctermfg=1
 :hi String guifg=SkyBlue ctermfg=darkcyan
 :hi Comment term=bold ctermfg=11 guifg=SeaGreen
-:hi Constant guifg=#ffa0a0 ctermfg=brown
+:hi Constant guifg=#ffa0a0 ctermfg=brown 
 :hi Special guifg=darkkhaki ctermfg=brown
-:hi Identifier guifg=salmon ctermfg=red
+:hi Identifier guifg=#f85e50 ctermfg=red
+":hi Identifier guifg=salmon ctermfg=red
 :hi Include guifg=red ctermfg=red
-:hi PreProc guifg=#e01d16 ctermfg=red
+":hi PreProc guifg=#e01d16 ctermfg=red
+:hi PreProc guifg=#f85e50 ctermfg=red
 :hi Operator guifg=Red ctermfg=Red
 :hi Define guifg=gold gui=bold ctermfg=yellow
 :hi Type guifg=CornflowerBlue ctermfg=2
@@ -42,7 +43,7 @@ let colors_name = "newslate"
 :hi Structure guifg=green ctermfg=green
 :hi LineNr guifg=grey50 ctermfg=3
 :hi Ignore guifg=grey40 cterm=bold ctermfg=7
-:hi Todo guifg=orangered guibg=yellow2
+:hi Todo term=bold ctermfg=11 guifg=SeaGreen guibg=grey15  gui=bold
 :hi Directory ctermfg=darkcyan
 :hi ErrorMsg cterm=bold guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 :hi VisualNOS cterm=bold,underline

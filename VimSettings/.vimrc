@@ -10,14 +10,6 @@ function! Speak(string)
 	endif
 endfunction
 
-if !exists("*ReloadVimrc()")
-	function! ReloadVimrc()
-		source $MYVIMRC
-	endfunction
-endif
-nnoremap <F9> :call ReloadVimrc()<CR>
-command! Vimrc call ReloadVimrc()
-
 
 if !exists('vim_settings')
 	echo "No vim_settings set"
@@ -25,9 +17,24 @@ endif
 
 let &runtimepath = vim_settings."/.vim,".&runtimepath
 
+"TODO: Change this to dynamic location
+call plug#begin("D:/EnviromentSettings/VimSettings/.vim/plugger")
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-scripts/Conque-shell'
+Plug 'OrangeT/vim-csharp'
+call plug#end()
+
+if !exists("*ReloadVimrc()")
+	function! ReloadVimrc()
+		source $MYVIMRC
+	endfunction
+endif
+nnoremap <F8> :call ReloadVimrc()<CR>
+command! Vimrc call ReloadVimrc()
+
+
 
 "System specifics
-"if has('win32')
 if has("gui_running")
 	execute "source ".vim_settings."/gui.vim"
 endif
@@ -37,8 +44,5 @@ set clipboard=unnamed
 colorscheme NewSlate 
 
 
-"executable(D:\Programs\Git\git-cmd.exe)
-call plug#begin('D:\EnviromentSettings\VimSettings\.vim\plugger')
-call plug#end()
 
 call Speak("Vimrc loaded.")

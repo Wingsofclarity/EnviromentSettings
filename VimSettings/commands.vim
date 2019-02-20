@@ -13,3 +13,4 @@ command! Bash ConqueTerm bash
 command! Here execute "cd %:p:h"
 command! CP :%s/ROWTERMINATOR = '\\n'/ROWTERMINATOR = '¦\\n',\r	CODEPAGE = '1252'/g
 command! Bit :%s/boolean,/bit NULL,/g
+nnoremap <F2> :messages<CR>
