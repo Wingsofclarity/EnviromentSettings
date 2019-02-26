@@ -18,7 +18,7 @@ endif
 let &runtimepath = vim_settings."/.vim,".&runtimepath
 
 "TODO: Change this to dynamic location
-call plug#begin("D:/EnviromentSettings/VimSettings/.vim/plugger")
+call plug#begin("C:/Users/gusros/EnviromentSettings/VimSettings/.vim/plugger")
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/Conque-shell'
 Plug 'OrangeT/vim-csharp'
