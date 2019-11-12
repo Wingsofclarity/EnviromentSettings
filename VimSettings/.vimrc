@@ -15,7 +15,7 @@ if !exists('vim_settings')
 	echo "No vim_settings set"
 endif
 
-let &runtimepath = vim_settings."/.vim,".&runtimepath
+let &runtimepath = &runtimepath.",".vim_settings."/.vim"
 
 "TODO: Change this to dynamic location
 call plug#begin("C:/Users/gusros/EnviromentSettings/VimSettings/.vim/plugger")
@@ -36,6 +36,7 @@ command! Vimrc call ReloadVimrc()
 
 "System specifics
 if has("gui_running")
+	call Speak("Graphical vim detected")
 	execute "source ".vim_settings."/gui.vim"
 endif
 execute "source ".vim_settings."/basic_formation.vim"
