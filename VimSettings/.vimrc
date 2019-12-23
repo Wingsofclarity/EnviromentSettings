@@ -1,3 +1,7 @@
+if !exists(a:verbose)
+	echo "Verbose variable not set."
+	let verbose=1
+endif
 if !exists("*ReloadVimrc()")
 	function! ReloadVimrc()
 		:source $MYVIMRC
@@ -7,10 +11,19 @@ endif
 :command! Vimrc call ReloadVimrc()
 
 function! Speak(verbose, string)
+	if !exists(a:verbose)
+		echo "Verbose variable not set."
+		let verbose=1
+	endif
 	if (a:verbose)
 		echo a:string
 	endif
 endfunction
+
+"function! SaveAs(string)
+"	:w a:string
+"	:e a:string
+"endfunction
 
 if !exists('vim_settings')
 	echo "No vim_settings set"
