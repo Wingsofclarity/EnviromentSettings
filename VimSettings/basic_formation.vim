@@ -11,4 +11,4 @@ execute "set tabstop=".tabsize
 execute "set shiftwidth=".tabsize
 execute "set softtabstop=".tabsize
 syntax enable
-:call Speak(verbose,"Basic formation loaded.")
+:call Speak("Basic formation loaded.")
